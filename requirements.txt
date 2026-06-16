@@ -1,0 +1,22 @@
+# 核心框架
+streamlit==1.35.0
+
+# AI相关
+chromadb==0.4.24
+langchain==0.1.0
+openai==1.12.0
+
+# 工具
+python-dotenv==1.0.1
+pydantic==2.5.0
+
+# ⭐ 以下是解决冲突的关键
+protobuf==3.20.3
+opentelemetry-api==1.21.0
+opentelemetry-sdk==1.21.0
+opentelemetry-exporter-otlp==1.21.0
+opentelemetry-exporter-otlp-proto-grpc==1.21.0
+opentelemetry-exporter-otlp-proto-http==1.21.0
+opentelemetry-proto==1.21.0
+googleapis-common-protos==1.63.0
+grpcio==1.62.0
