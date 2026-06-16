@@ -1,3 +1,6 @@
+#简历解析
+pypdf==5.6.0
+
 # 使用旧版 chromadb（不依赖 opentelemetry）
 chromadb==0.4.22
 
