@@ -1,5 +1,7 @@
-#简历解析
-pypdf==5.6.0
+# PDF解析库（至少安装一个）
+pypdf>=3.0.0
+pdfminer.six>=20221105
+PyMuPDF>=1.23.0
 
 # 使用旧版 chromadb（不依赖 opentelemetry）
 chromadb==0.4.22
