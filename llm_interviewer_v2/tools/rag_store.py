@@ -20,7 +20,13 @@ try:
     import chromadb
     from chromadb.utils.embedding_functions import DefaultEmbeddingFunction
     _CHROMADB_AVAILABLE = True
-except ImportError:
+
+except Exception as e:
+    print(f"Chroma load failed: {e}")
+
+    chromadb = None
+    DefaultEmbeddingFunction = None
+
     _CHROMADB_AVAILABLE = False
 
 from core.models import Question, Topic
