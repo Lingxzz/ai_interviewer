@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import json
 import os
+import streamlit as st
 import re
 from dataclasses import dataclass, field
 
@@ -95,9 +96,9 @@ class FinalReportAgent:
 
     def __init__(self):
         self.model = init_chat_model(
-            model=os.getenv('DEEPSEEK_MODEL'),
-            api_key=os.getenv('DEEPSEEK_API_KEY'),
-            base_url=os.getenv('DEEPSEEK_BASE_URL'),
+            model=st.secrets["DEEPSEEK_MODEL"],
+            api_key=st.secrets["DEEPSEEK_API_KEY"],
+            base_url=st.secrets["DEEPSEEK_BASE_URL"],
             model_provider='openai',
             extra_body={"thinking": {"type": "disabled"}}
         )

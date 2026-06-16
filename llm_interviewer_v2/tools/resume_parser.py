@@ -17,9 +17,9 @@ def _call_llm(system_prompt: str, user_prompt: str, temperature: float = 0.2) ->
     使用与项目中相同的 Agent 调用方式
     """
     model = init_chat_model(
-        model=os.getenv('DEEPSEEK_MODEL'),
-        api_key=os.getenv('DEEPSEEK_API_KEY'),
-        base_url=os.getenv('DEEPSEEK_BASE_URL'),
+        model=st.secrets["DEEPSEEK_MODEL"],
+        api_key=st.secrets["DEEPSEEK_API_KEY"],
+        base_url=st.secrets["DEEPSEEK_BASE_URL"],
         model_provider='openai',
         temperature=temperature,
         extra_body={'thinking': {'type': 'disabled'}}
